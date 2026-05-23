@@ -50,6 +50,7 @@ All services cards feature an interactive **collapsible details panel** (accordi
 ├── contact.html        # Modern contact portal with active form handlers
 ├── style.css           # Premium stylesheet (Glass properties, animations, and media queries)
 ├── script.js          # Interactive JavaScript file (3D tilt, magnetic buttons, cursor, EmailJS dispatch)
+├── My Resume.pdf       # Professional digital resume PDF served directly from the root
 ├── photos/             # Organized visual assets (profile portrait, website screenshots, certificate JPGs)
 │   ├── main.jpg
 │   ├── nevermade.png
@@ -62,7 +63,6 @@ All services cards feature an interactive **collapsible details panel** (accordi
 │   ├── cert_pushpak.jpg
 │   └── cert_financial.jpg
 ├── pdfs/               # Professional digital credentials in vector-embedded PDF formats
-│   ├── resume.pdf
 │   ├── cert_internshala.pdf
 │   ├── cert_ibm.pdf
 │   ├── cert_ibm_webdev.pdf
