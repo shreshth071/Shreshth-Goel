@@ -364,4 +364,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // 11. Services Read More Expandable Panel Accordion
+    const readMoreBtns = document.querySelectorAll(".read-more-btn");
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const serviceBox = btn.closest(".services-box");
+            if (serviceBox) {
+                serviceBox.classList.toggle("expanded");
+                if (serviceBox.classList.contains("expanded")) {
+                    btn.textContent = "Read Less";
+                } else {
+                    btn.textContent = "Read More";
+                }
+            }
+        });
+    });
+
 });

@@ -24,10 +24,11 @@ The website features highly immersive visual designs and micro-animations:
 - **Interactions:** Custom letter-by-letter typing animation, scroll-reveal viewport animation (IntersectionObservers), scroll-triggered progress bars, and a dynamic back-to-top floating button.
 
 ### Core Services
-- **Web Development:** Responsive clean-code frontends.
-- **UI/UX Designing:** Focus on spacing, color harmony, and visual assets.
-- **App Development:** Feature-rich hybrid mobile environments.
-- **Backend Solutions:** Secure APIs, databases, and microservices.
+All services cards feature an interactive **collapsible details panel** (accordion) that expands smoothly inline:
+- **Web Development:** Responsive clean-code frontends, SPAs, semantic structure, and performance profiling.
+- **UI/UX Designing:** High-fidelity prototyping, custom color models, wireframe structures, and accessibility.
+- **App Development:** Cross-platform hybrid app architectures, smooth transition animations, and local storage integration.
+- **Backend Solutions:** RESTful API setups, database management models, secure key storages, and server routing.
 
 ### Active Integrations
 - **Form Delivery:** Direct **EmailJS Browser SDK** integration. Visitor submissions are processed asynchronously from the client side and delivered straight to your personal inbox with instant tactile spinner feedback.
