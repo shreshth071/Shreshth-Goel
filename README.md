@@ -41,13 +41,28 @@ All services cards feature an interactive **collapsible details panel** (accordi
 ```text
 ├── index.html          # Main landing page (Home, Services, Skills, Education, Experience)
 ├── websites.html       # Dynamic websites/projects showcase with sliding glass description panels
+├── certificates.html   # Professional credentials and certifications showcase page
 ├── contact.html        # Modern contact portal with active form handlers
 ├── style.css           # Premium stylesheet (Glass properties, animations, and media queries)
 ├── script.js          # Interactive JavaScript file (3D tilt, magnetic buttons, cursor, EmailJS dispatch)
-├── main.jpg            # Active profile picture portrait
-├── nevermade.png       # Library project showcase visual asset
-├── streamie.png        # Streamie Movies showcase visual asset
-├── aidfast.png         # Emergency Web showcase visual asset
+├── photos/             # Organized visual assets (profile portrait, website screenshots, certificate JPGs)
+│   ├── main.jpg
+│   ├── nevermade.png
+│   ├── streamie.png
+│   ├── aidfast.png
+│   ├── cert_internshala.jpg
+│   ├── cert_ibm.jpg
+│   ├── cert_ibm_webdev.jpg
+│   ├── cert_cdac.jpg
+│   ├── cert_pushpak.jpg
+│   └── cert_financial.jpg
+├── pdfs/               # Professional digital credentials in vector-embedded PDF formats
+│   ├── cert_internshala.pdf
+│   ├── cert_ibm.pdf
+│   ├── cert_ibm_webdev.pdf
+│   ├── cert_cdac.pdf
+│   ├── cert_pushpak.pdf
+│   └── cert_financial.pdf
 ├── netlify.toml        # Netlify security headers and root redirects configuration
 └── LICENSE             # MIT License
 ```

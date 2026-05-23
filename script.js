@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 6. Scroll Reveal Engine (Animate items when entering view)
     const animators = document.querySelectorAll(
-        ".heading, .services-box, .skills-box, .timeline-content, .contact form"
+        ".heading, .services-box, .skills-box, .timeline-content, .portfolio-box, .contact form"
     );
 
     // Apply reveal base class programmatically so JS-disabled devices still see content
@@ -186,6 +186,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 7. Premium Toast System & Client Form Validation
     const contactForm = document.getElementById("contact-form");
+
+    // EmailJS Configuration Keys
+    const PUBLIC_KEY = "NoIo1vziuhGxCoUQc";
+    const SERVICE_ID = "service_2rejuyn";
+    const TEMPLATE_ID = "template_zmuhv1k";
+
+    // Initialize EmailJS immediately on page load
+    if (contactForm && PUBLIC_KEY && PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+        try {
+            emailjs.init(PUBLIC_KEY);
+        } catch (initErr) {
+            console.error("[EmailJS Initialization Error]", initErr);
+        }
+    }
 
     function displayToast(message, iconClass = "fa-solid fa-circle-check") {
         let toastContainer = document.querySelector(".toast-container");
@@ -237,11 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // EmailJS Configuration Keys
-            const PUBLIC_KEY = "NoIo1vziuhGxCoUQc";
-            const SERVICE_ID = "service_2rejuyn";
-            const TEMPLATE_ID = "template_zmuhv1k";
-
             const originalBtnText = submitBtn.innerHTML;
 
             try {
@@ -251,9 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Check if keys are set
                 if (PUBLIC_KEY !== "YOUR_PUBLIC_KEY" && SERVICE_ID !== "YOUR_SERVICE_ID" && TEMPLATE_ID !== "YOUR_TEMPLATE_ID") {
-                    // Initialize EmailJS dynamically
-                    emailjs.init({ publicKey: PUBLIC_KEY });
-
                     // Map parameters to matches in your EmailJS template
                     const templateParams = {
                         from_name: nameField.value.trim(),
@@ -314,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Add hover effect for links and buttons
-        const hoverElements = document.querySelectorAll("a, .btn, .services-box, .skills-box, .timeline-content, input, textarea, button");
+        const hoverElements = document.querySelectorAll("a, .btn, .services-box, .skills-box, .timeline-content, .portfolio-box, input, textarea, button");
         hoverElements.forEach(el => {
             el.addEventListener("mouseenter", () => cursorFollower.classList.add("hover"));
             el.addEventListener("mouseleave", () => cursorFollower.classList.remove("hover"));
@@ -322,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 9. 3D Tilt Effect for Cards
-    const tiltElements = document.querySelectorAll(".services-box, .skills-box, .timeline-content");
+    const tiltElements = document.querySelectorAll(".services-box, .skills-box, .timeline-content, .portfolio-box");
     tiltElements.forEach(el => {
         el.addEventListener("mousemove", (e) => {
             const rect = el.getBoundingClientRect();
