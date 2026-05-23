@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Shreshth Goel. Hire me or let's talk about building sleek, highly responsive, and user-centric web applications.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Shreshth Goel | Hire Me & Let's Talk</title>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header>
+        <a href="index.html#home" class="logo">Shreshth Goel</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="websites.html">Websites</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#education">Education</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="padding-top: 15rem; min-height: calc(100vh - 10rem);">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" id="user-name" placeholder="Full Name" required>
+                <input type="email" id="user-email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" id="user-phone" placeholder="Phone Number">
+                <input type="text" id="email-subject" placeholder="Email Subject" required>
+            </div>
+            <textarea id="user-message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2026 by Shreshth Goel | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#contact" id="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- JS script file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
