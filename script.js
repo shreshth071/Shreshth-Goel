@@ -211,7 +211,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const toast = document.createElement("div");
         toast.className = "toast";
-        toast.innerHTML = `<i class="${iconClass}"></i><span>${message}</span>`;
+        
+        const icon = document.createElement("i");
+        icon.className = iconClass;
+        
+        const textSpan = document.createElement("span");
+        textSpan.textContent = message;
+        
+        toast.appendChild(icon);
+        toast.appendChild(textSpan);
         
         toastContainer.appendChild(toast);
 
@@ -251,12 +259,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            const originalBtnText = submitBtn.innerHTML;
+            const originalBtnText = submitBtn.textContent;
 
             try {
                 // Set loading spinner and disable state
                 submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px;"></i>Sending...';
+                submitBtn.textContent = "";
+                
+                const spinner = document.createElement("i");
+                spinner.className = "fa-solid fa-circle-notch fa-spin";
+                spinner.style.marginRight = "8px";
+                submitBtn.appendChild(spinner);
+                
+                const textNode = document.createTextNode("Sending...");
+                submitBtn.appendChild(textNode);
 
                 // Check if keys are set
                 if (PUBLIC_KEY !== "YOUR_PUBLIC_KEY" && SERVICE_ID !== "YOUR_SERVICE_ID" && TEMPLATE_ID !== "YOUR_TEMPLATE_ID") {
@@ -300,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } finally {
                 // Restore button state
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnText;
+                submitBtn.textContent = originalBtnText;
             }
         });
     }

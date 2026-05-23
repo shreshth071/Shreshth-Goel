@@ -7,6 +7,7 @@ A premium, interactive, and fully responsive personal portfolio website engineer
 ## 🌌 Aurora Glass Aesthetic & Animations
 
 The website features highly immersive visual designs and micro-animations:
+
 - **Dynamic Background Flow:** Animated, organic gradient orbs (Teal and Emerald) float and morph smoothly over a deep dark-slate background (`#0A0F1C`).
 - **Frosted Glass Cards:** Key content sections (Services, Skills, Timelines, Projects) are housed inside delicate glass panels using `backdrop-filter: blur(16px)` and translucent borders (`rgba(255,255,255,0.08)`).
 - **Interactive Cursor Follower:** A modern, inverted-color dot cursor is linked to a secondary follower ring that grows into a borderless glow when hovering over active elements.
@@ -19,18 +20,22 @@ The website features highly immersive visual designs and micro-animations:
 ## 🛠️ Features & Integrated Tech Stack
 
 ### Frontend Architecture
+
 - **Structure:** Semantic HTML5, FontAwesome v6 Icons, custom geometric & sans-serif Google Fonts (`Outfit` & `Inter`).
 - **Styling:** Custom Vanilla CSS3 using custom properties (Variables), CSS Flexbox/Grid layouts, and hardware-accelerated transitions.
 - **Interactions:** Custom letter-by-letter typing animation, scroll-reveal viewport animation (IntersectionObservers), scroll-triggered progress bars, and a dynamic back-to-top floating button.
 
 ### Core Services
+
 All services cards feature an interactive **collapsible details panel** (accordion) that expands smoothly inline:
+
 - **Web Development:** Responsive clean-code frontends, SPAs, semantic structure, and performance profiling.
 - **UI/UX Designing:** High-fidelity prototyping, custom color models, wireframe structures, and accessibility.
 - **App Development:** Cross-platform hybrid app architectures, smooth transition animations, and local storage integration.
 - **Backend Solutions:** RESTful API setups, database management models, secure key storages, and server routing.
 
 ### Active Integrations
+
 - **Form Delivery:** Direct **EmailJS Browser SDK** integration. Visitor submissions are processed asynchronously from the client side and delivered straight to your personal inbox with instant tactile spinner feedback.
 - **Profile Portrait:** Optimised profile container utilizing a vertical portrait `4:5` aspect ratio with top alignment (`object-position: top center`) to prevent top/hair cropping.
 
@@ -57,6 +62,7 @@ All services cards feature an interactive **collapsible details panel** (accordi
 │   ├── cert_pushpak.jpg
 │   └── cert_financial.jpg
 ├── pdfs/               # Professional digital credentials in vector-embedded PDF formats
+│   ├── resume.pdf
 │   ├── cert_internshala.pdf
 │   ├── cert_ibm.pdf
 │   ├── cert_ibm_webdev.pdf
@@ -80,7 +86,9 @@ const TEMPLATE_ID = "template_zmuhv1k";
 ```
 
 ### Dashboard Setup
+
 To ensure visitor submissions map successfully to your email templates, verify your template fields inside your EmailJS web dashboard:
+
 - **`{{from_name}}`** (Visitor's full name)
 - **`{{from_email}}`** (Visitor's email address)
 - **`{{phone}}`** (Visitor's phone number)
@@ -92,12 +100,15 @@ To ensure visitor submissions map successfully to your email templates, verify y
 ## 🚀 How to Run & Deploy
 
 ### Local Execution
+
 1. Clone or extract the repository files.
 2. Open `index.html` inside any web browser.
 3. For hot reloading, use VS Code's **Live Server** extension.
 
 ### Netlify Deployment
+
 This codebase is fully configured for deployment on Netlify in seconds:
+
 - **Drag & Drop:** Upload the root folder directly to the Netlify app console.
 - **Continuous Integration:** Link your GitHub repository directly to Netlify for automatic, zero-config updates on every git-push.
 
